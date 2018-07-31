@@ -35,23 +35,19 @@ class Cache {
       $this->dir = $dir;
     }
 
-    if(!is_dir($this->dir) && !mkdir($this->dir, 0775, true)) {
+    if(!is_dir($this->dir) && !mkdir($this->dir, 0775, true))
       throw new Exception('Unable to create cache directory ('.$this->dir.')');
-    }
 
-    if(!is_readable($this->dir) || !is_writable($this->dir)) {
-      if(!chmod($this->dir, 0775)) {
+    if(!is_readable($this->dir) || !is_writable($this->dir))
+      if(!chmod($this->dir, 0775))
         throw new Exception('Cache directory must be readable and writable ('.$this->dir.')');
-      }
-    }
 
     $this->path = $this->dir.'/'.$name.$ext;
 
     if(file_exists($this->path)) {
       $file = file_get_contents($this->path);
-      if(!empty($file)) {
+      if(!empty($file))
         $this->cache = unserialize($file);
-      }
     }
   }
 
@@ -68,9 +64,8 @@ class Cache {
   }
 
   public function get($key) {
-    if($this->has($key)) {
+    if($this->has($key))
       return $this->cache[$key]['v'];
-    }
 
     return false;
   }
