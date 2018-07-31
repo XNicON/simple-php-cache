@@ -9,7 +9,10 @@
             "email": "xnicon@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6"
+    },
     "autoload": {
         "psr-4": {
             "phpCache\\": "."

@@ -8,18 +8,15 @@ To install Simple PHP Cache, simply:
 ### Example One
 ```php
 require __DIR__ . '/vendor/autoload.php';
+
 use \phpCache\Cache;
 
 $c = new Cache();
 
 if(!$c->has("example")) {
-
-	$c->set("example", 'cache data', 300); // cache result for 5 minutes (300 seconds)
-
+  $c->set("example", 'cache data', 300); // cache result for 5 minutes (300 seconds)
 } else {
-
-	echo $c->get("example");
-
+  echo $c->get("example");
 }
 
 ```
@@ -29,14 +26,10 @@ if(!$c->has("example")) {
 $example = $c->get("example");
 
 if($example !== false) {
-
-    echo "Cached: " . $example;
-    $c->remove("example"); // remove from cache
-
+	echo "Cached: " . $example;
+	$c->remove("example"); // remove from cache
 } else {
-
-    echo "Cache not found or expired";
-
+  echo "Cache not found or expired";
 }
 ```
 
