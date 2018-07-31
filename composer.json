@@ -1,0 +1,17 @@
+{
+    "name": "x-nicon/simple-php-cache",
+    "description": "Simple PHP cache",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "X-NicoN",
+            "email": "xnicon@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "phpCache\\": "."
+        }
+    }
+}
