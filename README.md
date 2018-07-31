@@ -36,17 +36,17 @@ if($example !== false) {
 ## Functions
 ### __construct($name, $dir, $ext)
 Class constructor
-* `$name` - name of the cache (default phpcache)
-* `$dir` - directory where the cache will be stored (default TEMP system)
-* `$ext` - extension of the cache file (default .cache)
+* `$name` - name of the cache (default `phpcache`)
+* `$dir` - directory where the cache will be stored (default TEMP directory)
+* `$ext` - extension of the cache file (default `.cache`)
 
-### set($key, $value, $ttl = -1)
+### set($key, $value, $ttl = 0)
 Writes data to cache
 * `$key` - key of the value
 * `$value` - value
 * `$ttl` - *Time To Live* (in how many seconds value will expire)
 
-### get($key, &$out)
+### get($key)
 Reads data from cache
 * `$key` - key of the value
 * return:
