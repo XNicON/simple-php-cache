@@ -60,7 +60,10 @@ class Cache {
 	}
 
 	public function set($key, $value, $ttl = -1) {
-		$this->cache[$key]['e'] = time()+$ttl;
+		if($ttl > -1)
+			$ttl += time();
+
+		$this->cache[$key]['e'] = $ttl;
 		$this->cache[$key]['v'] = $value;
 	}
 
