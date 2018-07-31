@@ -26,8 +26,8 @@ if(!$c->has("example")) {
 $example = $c->get("example");
 
 if($example !== false) {
-	echo "Cached: " . $example;
-	$c->remove("example"); // remove from cache
+  echo "Cached: " . $example;
+  $c->remove("example"); // remove from cache
 } else {
   echo "Cache not found or expired";
 }
