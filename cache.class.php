@@ -59,8 +59,8 @@ class Cache {
 		$this->savestore();
 	}
 
-	public function set($key, $value, $ttl = -1) {
-		if($ttl > -1)
+	public function set($key, $value, $ttl = 0) {
+		if($ttl > 0)
 			$ttl += time();
 
 		$this->cache[$key]['e'] = $ttl;
@@ -86,7 +86,7 @@ class Cache {
 
 	public function has($key) {
 		if(array_key_exists($key, $this->cache)) {
-			if($this->cache[$key]['e'] == -1 || $this->cache[$key]['e'] > time()) {
+			if($this->cache[$key]['e'] == 0 || $this->cache[$key]['e'] > time()) {
 				return true;
 			} else {
 				unset($this->cache[$key]);
