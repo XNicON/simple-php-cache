@@ -59,8 +59,10 @@ class Cache {
     if($ttl > 0)
       $ttl += time();
 
-    $this->cache[$key]['e'] = $ttl;
-    $this->cache[$key]['v'] = $value;
+    $this->cache[$key] = [
+    	'e' => $ttl,
+    	'v' => $value
+    ];
   }
 
   public function get($key) {
