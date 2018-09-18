@@ -35,7 +35,7 @@ if($example !== false) {
 
 ### Example Three
 ```php
-$c->set("progress", "50", 300); // cache result for 5 minutes (300 seconds)
+$c->set("progress", 50, 300); // cache result for 5 minutes (300 seconds)
 
 $progress = $c->get("progress", 0); // default return 0
 
