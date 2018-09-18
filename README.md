@@ -33,6 +33,15 @@ if($example !== false) {
 }
 ```
 
+### Example Three
+```php
+$c->set("progress", "50", 300); // cache result for 5 minutes (300 seconds)
+
+$progress = $c->get("progress", 0); // default return 0
+
+echo "Progress: " . $progress;
+```
+
 ## Functions
 ### __construct($name, $dir, $ext)
 Class constructor
@@ -46,20 +55,21 @@ Writes data to cache
 * `$value` - value
 * `$ttl` - *Time To Live* (in how many seconds value will expire)
 
-### get($key)
+### get($key, $default = false)
 Reads data from cache
 * `$key` - key of the value
+* `$default` - is default value return if value by `$key` not found (default `false`)
 * return:
   * bool(false) - value not cached or expired
   * array - if success
-  
+
 ### remove($key)
 Removes data from cache
 * `$key` - key of the value
 * return:
   * bool(false) - key not found
   * bool(true) - success
-  
+
 ### has($key)
 Check exists and not is expired cache
 * `$key` - key of the value
