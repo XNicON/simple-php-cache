@@ -3,9 +3,9 @@
 /**
  * cache.class.php
  *
- * @copyright      MIT
- * @author         X-NicON https://github.com/X-NicON
- * @since          0.1
+ * @copyright MIT
+ * @author    X-NicON https://github.com/X-NicON
+ * @since     0.2
  *
  */
 
@@ -65,11 +65,11 @@ class Cache {
     ];
   }
 
-  public function get($key) {
+  public function get($key, $default = false) {
     if($this->has($key))
       return $this->cache[$key]['v'];
 
-    return false;
+    return $default;
   }
 
   public function remove($key) {
