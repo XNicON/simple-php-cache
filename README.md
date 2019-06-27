@@ -2,7 +2,7 @@
 ## Quick Start
 To install Simple PHP Cache, simply:
 
-    $ composer require xnicon/php-simple-cache:dev-master
+    $ composer require xnicon/php-simple-cache
 
 ## Code Examples
 ### Example One
