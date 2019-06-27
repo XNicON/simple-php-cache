@@ -5,11 +5,10 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "X-NicoN",
+            "name": "XNicoN",
             "email": "xnicon@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.6"
     },
