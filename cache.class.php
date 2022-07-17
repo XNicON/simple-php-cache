@@ -1,14 +1,14 @@
 <?php
 
+namespace phpCache;
+
+use RuntimeException;
+
 /**
  * @copyright MIT
  * @author    X-NicON https://github.com/X-NicON
  * @since     0.2
  */
-namespace phpCache;
-
-use RuntimeException;
-
 class Cache
 {
     private array $cache = [];
